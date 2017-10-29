@@ -1,0 +1,27 @@
+var barWidth = 20;
+var lastBar = -1;
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  colorMode(HSB, width, height, 100); 
+  noStroke();
+}
+
+function draw() {
+    
+     ellipse(width/2, height/2, 400,400)
+    
+  var whichBar = mouseX / barWidth;
+  if (whichBar != lastBar) {
+    var barX = whichBar * barWidth;
+    fill(barX, mouseY, 66);
+    rect(barX, 0, barWidth, height);
+    lastBar = whichBar;
+ 
+ 
+  }
+}
+
+function touchMoved() {
+  return false;
+}
