@@ -1,0 +1,27 @@
+/*
+Creation & Computation - Kate Hartman
+Click Colors
+Fall 2016
+*/
+
+function setup() {
+  // create a canvas the size of the display
+  createCanvas(windowWidth, windowHeight);
+
+
+}
+
+function draw() {
+ 
+    fill(0,0,255)
+    ellipse(width/2,height/2, 400,400)
+}
+
+function mousePressed() {
+  
+    background(random(0, 255), random(0, 255), random(0, 255));
+}
+
+function touchMoved() {
+  return false;
+}
